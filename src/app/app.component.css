@@ -1,0 +1,14 @@
+.example-card_size {
+    width: 300px;
+  }
+ 
+  .example-card {
+    text-align: left;
+    
+    /* background-color: #923535; */
+  }
+    .example-header-image {
+        background-image: url('https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png');
+       background-size: cover;
+  }
+  
