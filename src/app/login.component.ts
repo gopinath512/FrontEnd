@@ -4,7 +4,7 @@ import { AuthService } from './auth.service';
 @Component({
     selector: 'login',
     template: `
-        <md-card>
+        <mat-card>
             <md-input-container>
                 <input mdInput [(ngModel)]="loginData.email" placeholder="Email" type="email">
             </md-input-container>
@@ -12,7 +12,7 @@ import { AuthService } from './auth.service';
                 <input mdInput [(ngModel)]="loginData.password" placeholder="Password" type="password">
             </md-input-container>
             <button md-raised-button color="primary" (click)="login()">Login</button>
-        </md-card>
+       </mat-card>
     `
 })
 export class LoginComponent {

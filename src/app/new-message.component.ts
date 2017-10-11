@@ -6,18 +6,18 @@ import { FileUploader } from 'ng2-file-upload';
 @Component({
     selector: 'new-message',
     template: `
-        <md-card class="card">
-            <md-card-content>
+        <mat-card class="card">
+            <mat-card-content>
                 <md-input-container>
                     <textarea [(ngModel)]="message.text" mdInput placeholder="Message"></textarea>
                   
                      </md-input-container>
                      <input type="file"  #fileInput placeholder="Upload file..." />
-                <md-card-actions>
+                <mat-card-actions>
                     <button (click)="post()" md-button color="primary">POST</button>
-                </md-card-actions>
-            </md-card-content>
-        </md-card>
+                </mat-card-actions>
+            </mat-card-content>
+       </mat-card>
     `
 })
 export class NewMessageComponent {

@@ -2,7 +2,7 @@ import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/toPromise';
 import { Subject } from 'rxjs/Rx'
-import { MdSnackBar } from '@angular/material';
+
 import { AuthService } from './auth.service';
 
 @Injectable()
@@ -15,7 +15,7 @@ export class WebService {
     
     messages = this.messageSubjet.asObservable();
 
-    constructor(private http: Http, private sb: MdSnackBar, private auth: AuthService) {
+    constructor(private http: Http, private auth: AuthService) {
         this.getMessages('');
     }
 
@@ -68,6 +68,6 @@ export class WebService {
 
     private handleError(error) {
         console.error(error);
-        this.sb.open(error, 'close', { duration: 2000 });
+        //this.sb.open(error, 'close', { duration: 2000 });
     }
 }

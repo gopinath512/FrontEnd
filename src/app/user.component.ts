@@ -4,7 +4,7 @@ import { WebService } from './web.service';
 @Component({
     selector: 'user',
     template: `
-        <md-card class="card">
+        <mat-card class="card">
             <md-input-container>
                 <input mdInput [(ngModel)]="model.firstName" placeholder="First Name">
             </md-input-container>
@@ -12,7 +12,7 @@ import { WebService } from './web.service';
                 <input mdInput [(ngModel)]="model.lastName" placeholder="Last Name">
             </md-input-container>
             <button md-raised-button color="primary" (click)="saveUser(model)">Save Changes</button>
-        </md-card>
+       </mat-card>
     `
 })
 export class UserComponent {

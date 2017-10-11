@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MaterialModule } from '@angular/material';
+import {CompatibilityModule, MatCardModule,MatButtonModule, MatCheckboxModule,MatToolbarModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home.component';
@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WebService } from './web.service';
 import { NewMessageComponent } from './new-message.component';
 import { MessageDetailComponent } from './message-Detail-component';
+
 
 var routes = [
   {
@@ -57,7 +58,7 @@ var routes = [
     RegisterComponent,
     NavComponent,
     NewMessageComponent,
-    MessageDetailComponent
+    MessageDetailComponent   
   ],
   imports: [
     FormsModule,
@@ -65,8 +66,16 @@ var routes = [
     ReactiveFormsModule,
      BrowserModule,
      HttpModule,
-     MaterialModule,
+     MatCardModule,
+     MatButtonModule,
+     MatCheckboxModule,
+     CompatibilityModule,
+     MatToolbarModule,
      RouterModule.forRoot(routes)
+  ],
+  exports: [
+   
+    CompatibilityModule
   ],
   providers: [AuthService,WebService],
   

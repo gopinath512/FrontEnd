@@ -8,28 +8,28 @@ import { ActivatedRoute } from '@angular/router';
     template: `
 
     
-  <md-card class="example-card" *ngFor="let message of webService.messages | async"  >
+  <mat-card class="example-card" *ngFor="let message of webService.messages | async"  >
   <a  [routerLink]="['/message',message.id]">
-  <md-card-header>
+  <mat-card-header>
     <div md-card-avatar class="example-header-image"></div>
-    <md-card-title>Shiba Inu</md-card-title>
-    <md-card-subtitle>Sub Title</md-card-subtitle>
-  </md-card-header>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Sub Title</mat-card-subtitle>
+  </mat-card-header>
   
   <img md-card-image src={{this.BASE_URL}}{{message.imgId}}  alt="Photo of a Shiba Inu"  class="example-card_size">
-  <md-card-content>
+  <mat-card-content>
     <p>
       The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
       A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
       bred for hunting.
     </p>
-  </md-card-content>
-  <md-card-actions>
+  </mat-card-content>
+  <mat-card-actions>
     <button md-button>LIKE</button>
     <button md-button>SHARE</button>
-  </md-card-actions>
+  </mat-card-actions>
   </a>
-  </md-card>
+ </mat-card>
   
 
     
